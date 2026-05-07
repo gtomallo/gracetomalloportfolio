@@ -1,0 +1,461 @@
+Here's the full updated index.html with your photo placed beside the bio. It's polaroid-styled with a slight tilt to fit the earthy/garden vibe and stacks below the bio on mobile.
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Grace Tomallo · Technical Writing Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-cream:#FAF6EE; --bg-cream-deep:#F1EADC;
+  --moss:#5A7A3F; --moss-deep:#2E4A26; --moss-light:#9CAF88;
+  --geranium:#C44536; --geranium-soft:#E27566;
+  --ink:#3A2E22; --ink-soft:#5C4A35;
+  --card:#FCF9F1; --border:#D9CFB8; --accent:#CFD9BA;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg-cream);color:var(--ink)}
+body{
+  font-family:'Cormorant Garamond','EB Garamond',Georgia,serif;
+  font-size:18px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(at 12% 8%, rgba(156,175,136,.18) 0, transparent 45%),
+    radial-gradient(at 88% 92%, rgba(226,117,102,.15) 0, transparent 50%);
+  background-attachment:fixed;
+}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;color:var(--moss-deep);margin:0}
+.script{font-family:'Caveat',cursive}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.body-font{font-family:'EB Garamond',Georgia,serif}
+
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.section{max-width:980px;margin:0 auto;padding:80px 24px;scroll-margin-top:96px}
+
+header.site{
+  position:sticky;top:0;z-index:30;
+  background:rgba(250,246,238,.88);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+header.site .row{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1280px;margin:0 auto;gap:16px;flex-wrap:wrap}
+header.site .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+header.site .brand .name{font-family:'Caveat',cursive;font-size:26px;color:var(--moss-deep);line-height:1}
+header.site .brand .sub{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
+header.site nav a{
+  text-decoration:none;color:var(--moss-deep);font-size:13px;letter-spacing:.12em;
+  text-transform:uppercase;margin-left:18px;padding-bottom:2px;border-bottom:1px solid transparent;transition:.2s
+}
+header.site nav a:hover{border-bottom-color:var(--geranium);color:var(--geranium)}
+
+.flower-border{display:flex;justify-content:space-between;align-items:flex-end;padding:0 8px;height:64px;pointer-events:none;user-select:none}
+.flower-border.bottom{transform:rotate(180deg);height:56px}
+.flower-border .item{animation:drift 6s ease-in-out infinite}
+.flower-border .item:nth-child(odd){animation-delay:.4s}
+.flower-border .item:nth-child(3n){animation-delay:1.2s}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.flower-border-top-bg{background:linear-gradient(180deg, rgba(156,175,136,.25), transparent)}
+.flower-border-bot-bg{background:linear-gradient(0deg, rgba(156,175,136,.30), transparent)}
+
+.paper{
+  background:var(--card);border:1px solid var(--border);border-radius:18px;
+  box-shadow:0 1px 0 rgba(217,207,184,.4),0 12px 30px -18px rgba(58,46,34,.18),inset 0 0 0 1px rgba(252,249,241,.6);
+  position:relative;
+}
+.doc-tag{
+  display:inline-flex;align-items:center;gap:8px;padding:4px 14px;border-radius:999px;
+  border:1px solid var(--moss-light);background:rgba(207,217,186,.5);color:var(--moss-deep);
+  font-family:'Caveat',cursive;font-size:18px;
+}
+.divider{display:flex;align-items:center;gap:14px;margin:28px 0;color:var(--moss)}
+.divider:before,.divider:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(156,175,136,.7),transparent)}
+
+/* Hero with photo */
+.hero{padding:60px 50px;border-radius:28px;overflow:hidden;position:relative;
+      display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+@media(min-width:840px){.hero{grid-template-columns:1.3fr 1fr;padding:64px 60px}}
+.hero h1{font-size:clamp(48px,8vw,96px);line-height:1.05}
+.hero .tomallo{display:block;font-family:'Caveat',cursive;color:var(--geranium);font-style:italic}
+.hero p{font-size:20px;color:var(--ink)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+
+/* Polaroid photo */
+.bio-photo-wrap{justify-self:center;position:relative}
+.bio-photo{
+  width:100%;max-width:340px;aspect-ratio:1/1;object-fit:cover;display:block;
+  border-radius:12px;
+  background:#fff;padding:14px 14px 56px;
+  box-shadow:0 24px 50px -22px rgba(58,46,34,.45),0 1px 0 rgba(0,0,0,.04);
+  transform:rotate(-3deg);transition:transform .4s ease;
+  border:1px solid var(--border);
+}
+.bio-photo:hover{transform:rotate(-1deg) translateY(-3px)}
+.bio-photo-caption{
+  position:absolute;left:0;right:0;bottom:18px;text-align:center;
+  font-family:'Caveat',cursive;font-size:22px;color:var(--moss-deep);
+  pointer-events:none;
+  transform:rotate(-3deg);
+}
+
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;
+  font-family:'Cormorant Garamond',serif;text-transform:uppercase;letter-spacing:.15em;font-size:13px;
+  text-decoration:none;transition:transform .2s
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--moss-deep);color:var(--bg-cream)}
+.btn-ghost{border:1px solid var(--moss-deep);color:var(--moss-deep)}
+
+.page-head{margin-bottom:30px}
+.page-head .num{font-family:'Caveat',cursive;font-size:48px;color:var(--geranium);margin-right:14px;vertical-align:baseline}
+.page-head h2{display:inline;font-size:clamp(36px,5vw,60px)}
+.page-head .sub{font-style:italic;color:var(--ink-soft);margin-top:10px;font-size:18px}
+
+.sheet{padding:40px;border-radius:20px}
+@media(max-width:640px){.sheet{padding:24px}.hero{padding:32px 24px}}
+
+.controls{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end;margin-bottom:14px}
+.viewer{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--bg-cream-deep)}
+.viewer iframe,.viewer video{display:block;width:100%;border:0}
+
+.memo-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding-bottom:20px;margin-bottom:24px;border-bottom:1px solid var(--border);gap:12px}
+.memo-head .title{font-family:'Caveat',cursive;font-size:32px;color:var(--moss-deep);line-height:1}
+.memo-head .tagline{font-style:italic;color:var(--ink-soft);font-size:14px;margin-top:4px}
+.memo-row{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:baseline;margin-bottom:8px}
+.memo-row .lbl{font-family:'Cormorant Garamond',serif;text-transform:uppercase;letter-spacing:.15em;font-size:11px;color:var(--ink-soft)}
+.memo-body p{font-family:'EB Garamond',serif;font-size:18px;margin:0 0 18px 0}
+
+.placeholder{
+  border:1.5px dashed var(--moss-light);border-radius:14px;padding:60px 30px;text-align:center;
+  background:repeating-linear-gradient(45deg,rgba(241,234,220,.6) 0 10px,rgba(250,246,238,.6) 10px 20px);
+}
+.placeholder .ph-title{font-family:'Caveat',cursive;font-size:30px;color:var(--moss-deep);margin-bottom:8px}
+.ph-pages{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+.ph-pages .pg{
+  width:96px;height:128px;border:1px solid var(--moss-light);border-radius:8px;
+  background:var(--bg-cream-deep);color:var(--moss);font-family:'Caveat',cursive;
+  display:flex;align-items:center;justify-content:center
+}
+
+.contents{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:24px}
+.contents a{
+  text-decoration:none;display:flex;gap:14px;align-items:flex-start;padding:18px;
+  background:var(--card);border:1px solid var(--border);border-radius:14px;transition:transform .2s
+}
+.contents a:hover{transform:translateY(-2px)}
+.contents .num{font-family:'Caveat',cursive;font-size:30px;color:var(--geranium);line-height:1}
+.contents .ttl{font-size:20px;color:var(--moss-deep);line-height:1.2}
+.contents .meta{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-soft);margin-top:4px}
+
+footer.site{margin-top:60px}
+footer.site .ftr-row{
+  max-width:1100px;margin:0 auto;padding:24px;display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:12px
+}
+footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-decoration-color:var(--moss-light);text-underline-offset:4px}
+
+.contact-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:760px){.contact-grid{grid-template-columns:1fr 1fr}}
+.contact-card{display:flex;align-items:center;gap:14px;padding:18px;background:var(--card);border:1px solid var(--border);border-radius:14px;text-decoration:none}
+.contact-card .ico{padding:10px;border-radius:999px;background:var(--accent);color:var(--moss-deep);display:flex}
+
+::selection{background:rgba(156,175,136,.6);color:var(--moss-deep)}
+</style>
+</head>
+<body>
+
+<div class="flower-border-top-bg"><div class="flower-border" id="topBorder"></div></div>
+
+<header class="site">
+  <div class="row">
+    <a href="#title" class="brand">
+      <svg viewBox="0 0 100 100" width="42" height="42" aria-hidden="true">
+        <path d="M50 95V45" stroke="#5C7A3F" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M50 78C38 76 30 70 26 60c10 0 20 6 24 16Z" fill="#6B8A4C" stroke="#3F5A2A" stroke-width="1"/>
+        <path d="M50 70c12-2 20-8 24-18-10 0-20 6-24 16Z" fill="#7C9B5A" stroke="#3F5A2A" stroke-width="1"/>
+        <circle cx="40" cy="32" r="6.5" fill="#C44536"/><circle cx="52" cy="22" r="7" fill="#D76456"/>
+        <circle cx="62" cy="32" r="6.5" fill="#B33A2C"/><circle cx="48" cy="38" r="5.5" fill="#E27566"/>
+        <circle cx="58" cy="40" r="5" fill="#C44536"/>
+      </svg>
+      <span><span class="name">Grace Tomallo</span><br><span class="sub">A Technical Writing Portfolio</span></span>
+    </a>
+    <nav>
+      <a href="#title">Title</a><a href="#resume">Resume</a><a href="#outcomes">Outcomes</a>
+      <a href="#club-memo">Club Memo</a><a href="#complaint">Complaint</a><a href="#flyer">Flyer</a>
+      <a href="#postmortem">Postmortem</a><a href="#emergency">Emergency</a><a href="#written">Written</a>
+      <a href="#video">Video</a><a href="#formal">Formal Report</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- TITLE PAGE WITH PHOTO -->
+<section id="title" class="section">
+  <div class="paper hero">
+    <div>
+      <span class="doc-tag">✿ English 2210 · Technical Writing Portfolio</span>
+      <h1 style="margin-top:18px">Grace<span class="tomallo">Tomallo</span></h1>
+      <div class="divider"></div>
+      <p>
+        Hello! My name is Grace Tomallo, and I am a History major at the University of New Mexico.
+        These pieces represent some of my best work from my Technical Writing and Communications
+        course, where I strengthened my skills in research, professional writing, and communication.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#resume">Begin the Portfolio →</a>
+        <a class="btn btn-ghost" href="mailto:Gtomallo@unm.edu">✉ Gtomallo@unm.edu</a>
+      </div>
+    </div>
+    <div class="bio-photo-wrap">
+      <img class="bio-photo"
+           src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/uscnn73j_IMG_4804.jpeg"
+           alt="Grace Tomallo">
+      <div class="bio-photo-caption">— Grace —</div>
+    </div>
+  </div>
+
+  <div style="margin-top:48px">
+    <p class="script" style="font-size:24px;color:var(--moss);margin:0">Portfolio Contents</p>
+    <h2 style="font-size:32px;margin:6px 0 0">Ten documents, one garden</h2>
+    <div class="contents">
+      <a href="#resume"><span class="num">01</span><span><span class="ttl">Resume</span><div class="meta">Document 1</div></span></a>
+      <a href="#outcomes"><span class="num">02</span><span><span class="ttl">Portfolio Outcomes Memo</span><div class="meta">Document 2</div></span></a>
+      <a href="#club-memo"><span class="num">03</span><span><span class="ttl">UNM Club Memo</span><div class="meta">Document 3</div></span></a>
+      <a href="#complaint"><span class="num">04</span><span><span class="ttl">Complaint Letter</span><div class="meta">Document 4</div></span></a>
+      <a href="#flyer"><span class="num">05</span><span><span class="ttl">UNM Club Flyer</span><div class="meta">Document 5</div></span></a>
+      <a href="#postmortem"><span class="num">06</span><span><span class="ttl">Postmortem Report</span><div class="meta">Document 6</div></span></a>
+      <a href="#emergency"><span class="num">07</span><span><span class="ttl">Emergency Instructions</span><div class="meta">Document 7</div></span></a>
+      <a href="#written"><span class="num">08</span><span><span class="ttl">Written Instructions</span><div class="meta">Document 8</div></span></a>
+      <a href="#video"><span class="num">09</span><span><span class="ttl">Video Instructions</span><div class="meta">Document 9</div></span></a>
+      <a href="#formal"><span class="num">10</span><span><span class="ttl">Formal Report</span><div class="meta">Document 10</div></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 1. RESUME -->
+<section id="resume" class="section">
+  <div class="page-head"><span class="doc-tag">✿ Document 1</span>
+    <div style="margin-top:12px"><span class="num">01.</span><h2>Resume</h2></div>
+    <p class="sub">A snapshot of skills, experience, and education.</p><div class="divider"></div></div>
+  <div class="paper sheet">
+    <div class="controls">
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/wr823fvt_Resume%20%282%29.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/wr823fvt_Resume%20%282%29.pdf">⬇ Download PDF</a>
+    </div>
+    <div class="viewer"><iframe height="1100" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/wr823fvt_Resume%20%282%29.pdf#view=FitH" title="Resume"></iframe></div>
+  </div>
+</section>
+
+<!-- 2. OUTCOMES MEMO -->
+<section id="outcomes" class="section">
+  <div class="page-head"><span class="doc-tag">✿ Document 2</span>
+    <div style="margin-top:12px"><span class="num">02.</span><h2>Portfolio Outcomes Memo</h2></div>
+    <p class="sub">A three-page reflective memo addressing each Course Outcome with specific examples.</p><div class="divider"></div></div>
+  <div class="paper sheet">
+    <div class="placeholder">
+      <div class="ph-title">Reflective Memo — Coming Soon</div>
+      <p style="color:var(--ink-soft);max-width:560px;margin:0 auto">The full three-page reflective memo is in revision. It will summarize each Course Outcome, give one specific example for each, and reflect on the strongest and weakest items in this portfolio.</p>
+      <div class="ph-pages"><div class="pg">Page 1</div><div class="pg">Page 2</div><div class="pg">Page 3</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. CLUB MEMO -->
+<section id="club-memo" class="section">
+  <div class="page-head"><span class="doc-tag">✿ Document 3</span>
+    <div style="margin-top:12px"><span class="num">03.</span><h2>UNM Club Memo</h2></div>
+    <p class="sub">An internal memo to club members proposing a campus parking solution.</p><div class="divider"></div></div>
+  <div class="paper sheet">
+    <div class="memo-head">
+      <div><div class="title">Lobo Parking</div><div class="tagline">Advocating for better parking and transport</div></div>
+    </div>
+    <div class="memo-row"><div class="lbl">Date</div><div>February 5th, 2026</div></div>
+    <div class="memo-row"><div class="lbl">To</div><div>All Lobo Parking Members</div></div>
+    <div class="memo-row"><div class="lbl">From</div><div>Grace Tomallo, Lead Officer</div></div>
+    <div class="memo-row"><div class="lbl">Subject</div><div>Proposal for Uber X subscription included in UNM student tuition.</div></div>
+    <div class="memo-body" style="margin-top:30px">
+      <p>The purpose of this memo is to address the parking shortage we have here at UNM as well as discuss the contents of a meeting to discuss possible solutions to this problem.</p>
+      <p>Many students struggle on a daily basis to find available parking spaces, often arriving late or even missing class due to our overcrowded lots. This problem is not only frustrating but affects students’ academic performance as well. Despite permit costs, parking availability doesn’t keep up with the number of students who have cars on campus.</p>
+      <p>One potential solution our club would like to explore is partnering with Uber X or ride-share services and including the cost in tuition. This program would reduce the number of cars on campus, ease congestion, and give students reliable transportation.</p>
+      <p>There will be a meeting held on <strong>Friday the 6th at 4:00 pm</strong> at Dane Smith Hall to discuss the issue and solutions further.</p>
+      <p>If you have any questions before the meeting, feel free to contact me at <a href="mailto:Gtomallo@unm.edu" style="color:var(--moss-deep);text-decoration:underline">Gtomallo@unm.edu</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. COMPLAINT -->
+<section id="complaint" class="section">
+  <div class="page-head"><span class="doc-tag">✿ Document 4</span>
+    <div style="margin-top:12px"><span class="num">04.</span><h2>UNM Club Complaint Letter</h2></div>
+    <p class="sub">A formal complaint letter written on behalf of the club to an external audience.</p><div class="divider"></div></div>
+  <div class="paper sheet">
+    <div class="controls">
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/8t5opasb_401%20Yale%20Blvd%20NE.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/8t5opasb_401%20Yale%20Blvd%20NE.pdf">⬇ Download PDF</a>
+    </div>
+    <div class="viewer"><iframe height="880" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/8t5opasb_401%20Yale%20Blvd%20NE.pdf#view=FitH" title="Complaint Letter"></iframe></div>
+  </div>
+</section>
+
+<!-- 5. FLYER -->
+<section id="flyer" class="section">
+  <div class="page-head"><span class="doc-tag">✿ Document 5</span>
+    <div style="margin-top:12px"><span class="num">05.</span><h2>UNM Club Flyer</h2></div>
+    <p class="sub">A one-page promotional flyer designed for the Garden Club.</p><div class="divider"></div></div>
+  <div class="paper sheet">
+    <div class="controls">
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/oktbwzyf_Garden%20Club%20%281%29.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/oktbwzyf_Garden%20Club%20%281%29.pdf">⬇ Download PDF</a>
+    </div>
+    <div class="viewer"><iframe height="1000" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/oktbwzyf_Garden%20Club%20%281%29.pdf#view=FitH" title="Flyer"></iframe></div>
+  </div>
+</section>
+
+<!-- 6. POSTMORTEM -->
+<section id="postmortem" class="section">
+  <div class="page-head"><span class="doc-tag">✿ Document 6</span>
+    <div style="margin-top:12px"><span class="num">06.</span><h2>Postmortem PowerPoint Report</h2></div>
+    <p class="sub">A slide-deck postmortem analyzing what worked, what didn’t, and what to change next time.</p><div class="divider"></div></div>
+  <div class="paper sheet">
+    <div class="controls">
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/l4ngchv1_SWA_5%20.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/l4ngchv1_SWA_5%20.pdf">⬇ Download PDF</a>
+    </div>
+    <div class="viewer"><iframe height="760" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/l4ngchv1_SWA_5%20.pdf#view=FitH" title="Postmortem"></iframe></div>
+  </div>
+</section>
+
+<!-- 7. EMERGENCY -->
+<section id="emergency" class="section">
+  <div class="page-head"><span class="doc-tag">✿ Document 7</span>
+    <div style="margin-top:12px"><span class="num">07.</span><h2>Emergency Instructions</h2></div>
+    <p class="sub">Concise, audience-appropriate emergency-procedure instructions.</p><div class="divider"></div></div>
+  <div class="paper sheet">
+    <div class="controls">
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/tw83rc92_STing%20Emergency%20%281%29.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/tw83rc92_STing%20Emergency%20%281%29.pdf">⬇ Download PDF</a>
+    </div>
+    <div class="viewer"><iframe height="880" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/tw83rc92_STing%20Emergency%20%281%29.pdf#view=FitH" title="Emergency Instructions"></iframe></div>
+  </div>
+</section>
+
+<!-- 8. WRITTEN -->
+<section id="written" class="section">
+  <div class="page-head"><span class="doc-tag">✿ Document 8</span>
+    <div style="margin-top:12px"><span class="num">08.</span><h2>Written Instructions</h2></div>
+    <p class="sub">Step-by-step written instructions — how to make pizza rolls.</p><div class="divider"></div></div>
+  <div class="paper sheet">
+    <div class="controls">
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/5exmhdp7_Pizza%20Rolls.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/5exmhdp7_Pizza%20Rolls.pdf">⬇ Download PDF</a>
+    </div>
+    <div class="viewer"><iframe height="880" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/5exmhdp7_Pizza%20Rolls.pdf#view=FitH" title="Written Instructions"></iframe></div>
+  </div>
+</section>
+
+<!-- 9. VIDEO -->
+<section id="video" class="section">
+  <div class="page-head"><span class="doc-tag">✿ Document 9</span>
+    <div style="margin-top:12px"><span class="num">09.</span><h2>Video Instructions</h2></div>
+    <p class="sub">A short instructional video walking the audience through a procedure.</p><div class="divider"></div></div>
+  <div class="paper sheet">
+    <div class="controls">
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/7b2iesih_copy_442DA329-AFB9-4702-8575-8E2DFB04E59E%20%281%29.mov">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/7b2iesih_copy_442DA329-AFB9-4702-8575-8E2DFB04E59E%20%281%29.mov">⬇ Download Video</a>
+    </div>
+    <div class="viewer" style="background:#000">
+      <video controls playsinline preload="metadata">
+        <source src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/7b2iesih_copy_442DA329-AFB9-4702-8575-8E2DFB04E59E%20%281%29.mov" type="video/quicktime">
+        <source src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/7b2iesih_copy_442DA329-AFB9-4702-8575-8E2DFB04E59E%20%281%29.mov" type="video/mp4">
+        Your browser may not support this video. Use the Download Video button above.
+      </video>
+    </div>
+    <p style="text-align:center;font-style:italic;color:var(--ink-soft);font-size:14px;margin-top:14px">Note: this video is a .mov file recorded on iPhone. If it doesn’t play in your browser, use the Download button above.</p>
+  </div>
+</section>
+
+<!-- 10. FORMAL REPORT -->
+<section id="formal" class="section">
+  <div class="page-head"><span class="doc-tag">✿ Document 10</span>
+    <div style="margin-top:12px"><span class="num">10.</span><h2>Formal Report</h2></div>
+    <p class="sub">The semester’s capstone formal report — research, analysis, and recommendations.</p><div class="divider"></div></div>
+  <div class="paper sheet">
+    <div class="controls">
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/ywq848sx_mwa2%20%282%29.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/ywq848sx_mwa2%20%282%29.pdf">⬇ Download PDF</a>
+    </div>
+    <div class="viewer"><iframe height="960" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/ywq848sx_mwa2%20%282%29.pdf#view=FitH" title="Formal Report"></iframe></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="page-head"><span class="doc-tag">✿ Conclusion</span>
+    <div style="margin-top:12px"><h2>Conclusion &amp; Contact</h2></div>
+    <p class="sub">Thank you for reading. If you’d like to discuss anything in this portfolio, here’s the easiest way to reach me.</p><div class="divider"></div></div>
+  <div class="paper sheet">
+    <p class="script" style="font-size:30px;color:var(--moss-deep);margin:0 0 8px">A note to close.</p>
+    <p class="body-font" style="font-size:18px">Building this portfolio reminded me that good technical writing is, at its heart, a kind of hospitality — clearing a path so the reader can walk through with confidence. I’m proud of the work gathered here, grateful for the feedback that shaped it, and excited about where it’s going next.</p>
+    <p class="body-font" style="font-size:18px">If any of these documents resonate with you, or if you have a project that needs careful, audience-aware writing, I’d love to hear from you.</p>
+    <div class="contact-grid" style="margin-top:24px">
+      <a class="contact-card" href="mailto:Gtomallo@unm.edu">
+        <span class="ico">✉</span>
+        <span><div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)">Email</div><div class="serif" style="font-size:20px;color:var(--moss-deep)">Gtomallo@unm.edu</div></span>
+      </a>
+      <div class="contact-card">
+        <span class="ico">🎓</span>
+        <span><div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)">Institution</div><div class="serif" style="font-size:20px;color:var(--moss-deep)">University of New Mexico</div></span>
+      </div>
+      <div class="contact-card">
+        <span class="ico">📍</span>
+        <span><div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)">Course</div><div class="serif" style="font-size:20px;color:var(--moss-deep)">English 2210 · Technical Writing</div></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="ftr-row">
+    <p class="script" style="font-size:22px;color:var(--moss-deep);margin:0">Grace Tomallo · UNM English 2210</p>
+    <a href="mailto:Gtomallo@unm.edu">Gtomallo@unm.edu</a>
+  </div>
+  <div class="flower-border-bot-bg"><div class="flower-border bottom" id="botBorder"></div></div>
+</footer>
+
+<script>
+const flowerSVG = `<svg viewBox="0 0 100 100" width="50" height="50" aria-hidden="true">
+  <path d="M50 95V45" stroke="#5C7A3F" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M50 78C38 76 30 70 26 60c10 0 20 6 24 16Z" fill="#6B8A4C" stroke="#3F5A2A" stroke-width="1"/>
+  <path d="M50 70c12-2 20-8 24-18-10 0-20 6-24 16Z" fill="#7C9B5A" stroke="#3F5A2A" stroke-width="1"/>
+  <circle cx="40" cy="32" r="6.5" fill="#C44536" stroke="#7A2A1F" stroke-width=".8"/>
+  <circle cx="52" cy="22" r="7" fill="#D76456" stroke="#7A2A1F" stroke-width=".8"/>
+  <circle cx="62" cy="32" r="6.5" fill="#B33A2C" stroke="#7A2A1F" stroke-width=".8"/>
+  <circle cx="48" cy="38" r="5.5" fill="#E27566" stroke="#7A2A1F" stroke-width=".8"/>
+  <circle cx="58" cy="40" r="5" fill="#C44536" stroke="#7A2A1F" stroke-width=".8"/>
+  <circle cx="40" cy="32" r="1.4" fill="#FBE7B5"/><circle cx="52" cy="22" r="1.4" fill="#FBE7B5"/>
+  <circle cx="62" cy="32" r="1.4" fill="#FBE7B5"/>
+</svg>`;
+const sprigSVG = `<svg viewBox="0 0 80 80" width="34" height="34" aria-hidden="true">
+  <path d="M10 70C30 55 50 40 70 15" stroke="#5C7A3F" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="22" cy="60" rx="7" ry="3" fill="#7C9B5A" stroke="#3F5A2A" stroke-width=".8" transform="rotate(-30 22 60)"/>
+  <ellipse cx="36" cy="48" rx="8" ry="3.5" fill="#6B8A4C" stroke="#3F5A2A" stroke-width=".8" transform="rotate(-30 36 48)"/>
+  <ellipse cx="50" cy="34" rx="7" ry="3" fill="#7C9B5A" stroke="#3F5A2A" stroke-width=".8" transform="rotate(-30 50 34)"/>
+  <circle cx="62" cy="22" r="3.5" fill="#C44536"/><circle cx="58" cy="14" r="3" fill="#D76456"/><circle cx="68" cy="14" r="3" fill="#B33A2C"/>
+</svg>`;
+function buildBorder(id, count){
+  const el = document.getElementById(id);
+  for (let i=0;i<count;i++){
+    const div = document.createElement('div');
+    div.className = 'item';
+    div.style.animationDelay = ((i % 5) * 0.4) + 's';
+    div.innerHTML = (i % 2 === 0) ? flowerSVG : sprigSVG;
+    el.appendChild(div);
+  }
+}
+buildBorder('topBorder', 14);
+buildBorder('botBorder', 14);
+</script>
+</body>
+</html>
