@@ -31,22 +31,14 @@ h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;color:var(--moss-deep);m
 .serif{font-family:'Cormorant Garamond',Georgia,serif}
 .body-font{font-family:'EB Garamond',Georgia,serif}
 
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
 .section{max-width:980px;margin:0 auto;padding:80px 24px;scroll-margin-top:96px}
 
-header.site{
-  position:sticky;top:0;z-index:30;
-  background:rgba(250,246,238,.88);backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--border);
-}
+header.site{position:sticky;top:0;z-index:30;background:rgba(250,246,238,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
 header.site .row{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1280px;margin:0 auto;gap:16px;flex-wrap:wrap}
 header.site .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 header.site .brand .name{font-family:'Caveat',cursive;font-size:26px;color:var(--moss-deep);line-height:1}
 header.site .brand .sub{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
-header.site nav a{
-  text-decoration:none;color:var(--moss-deep);font-size:13px;letter-spacing:.12em;
-  text-transform:uppercase;margin-left:18px;padding-bottom:2px;border-bottom:1px solid transparent;transition:.2s
-}
+header.site nav a{text-decoration:none;color:var(--moss-deep);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-left:18px;padding-bottom:2px;border-bottom:1px solid transparent;transition:.2s}
 header.site nav a:hover{border-bottom-color:var(--geranium);color:var(--geranium)}
 
 .flower-border{display:flex;justify-content:space-between;align-items:flex-end;padding:0 8px;height:64px;pointer-events:none;user-select:none}
@@ -58,21 +50,12 @@ header.site nav a:hover{border-bottom-color:var(--geranium);color:var(--geranium
 .flower-border-top-bg{background:linear-gradient(180deg, rgba(156,175,136,.25), transparent)}
 .flower-border-bot-bg{background:linear-gradient(0deg, rgba(156,175,136,.30), transparent)}
 
-.paper{
-  background:var(--card);border:1px solid var(--border);border-radius:18px;
-  box-shadow:0 1px 0 rgba(217,207,184,.4),0 12px 30px -18px rgba(58,46,34,.18),inset 0 0 0 1px rgba(252,249,241,.6);
-  position:relative;
-}
-.doc-tag{
-  display:inline-flex;align-items:center;gap:8px;padding:4px 14px;border-radius:999px;
-  border:1px solid var(--moss-light);background:rgba(207,217,186,.5);color:var(--moss-deep);
-  font-family:'Caveat',cursive;font-size:18px;
-}
+.paper{background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:0 1px 0 rgba(217,207,184,.4),0 12px 30px -18px rgba(58,46,34,.18),inset 0 0 0 1px rgba(252,249,241,.6);position:relative}
+.doc-tag{display:inline-flex;align-items:center;gap:8px;padding:4px 14px;border-radius:999px;border:1px solid var(--moss-light);background:rgba(207,217,186,.5);color:var(--moss-deep);font-family:'Caveat',cursive;font-size:18px}
 .divider{display:flex;align-items:center;gap:14px;margin:28px 0;color:var(--moss)}
 .divider:before,.divider:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(156,175,136,.7),transparent)}
 
-.hero{padding:60px 50px;border-radius:28px;overflow:hidden;position:relative;
-      display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
+.hero{padding:60px 50px;border-radius:28px;overflow:hidden;position:relative;display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
 @media(min-width:840px){.hero{grid-template-columns:1.3fr 1fr;padding:64px 60px}}
 .hero h1{font-size:clamp(48px,8vw,96px);line-height:1.05}
 .hero .tomallo{display:block;font-family:'Caveat',cursive;color:var(--geranium);font-style:italic}
@@ -80,27 +63,11 @@ header.site nav a:hover{border-bottom-color:var(--geranium);color:var(--geranium
 .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
 
 .bio-photo-wrap{justify-self:center;position:relative}
-.bio-photo{
-  width:100%;max-width:340px;aspect-ratio:1/1;object-fit:cover;display:block;
-  border-radius:12px;
-  background:#fff;padding:14px 14px 56px;
-  box-shadow:0 24px 50px -22px rgba(58,46,34,.45),0 1px 0 rgba(0,0,0,.04);
-  transform:rotate(-3deg);transition:transform .4s ease;
-  border:1px solid var(--border);
-}
+.bio-photo{width:100%;max-width:340px;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:12px;background:#fff;padding:14px 14px 56px;box-shadow:0 24px 50px -22px rgba(58,46,34,.45),0 1px 0 rgba(0,0,0,.04);transform:rotate(-3deg);transition:transform .4s ease;border:1px solid var(--border)}
 .bio-photo:hover{transform:rotate(-1deg) translateY(-3px)}
-.bio-photo-caption{
-  position:absolute;left:0;right:0;bottom:18px;text-align:center;
-  font-family:'Caveat',cursive;font-size:22px;color:var(--moss-deep);
-  pointer-events:none;
-  transform:rotate(-3deg);
-}
+.bio-photo-caption{position:absolute;left:0;right:0;bottom:18px;text-align:center;font-family:'Caveat',cursive;font-size:22px;color:var(--moss-deep);pointer-events:none;transform:rotate(-3deg)}
 
-.btn{
-  display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;
-  font-family:'Cormorant Garamond',serif;text-transform:uppercase;letter-spacing:.15em;font-size:13px;
-  text-decoration:none;transition:transform .2s
-}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-family:'Cormorant Garamond',serif;text-transform:uppercase;letter-spacing:.15em;font-size:13px;text-decoration:none;transition:transform .2s}
 .btn:hover{transform:translateY(-2px)}
 .btn-primary{background:var(--moss-deep);color:var(--bg-cream)}
 .btn-ghost{border:1px solid var(--moss-deep);color:var(--moss-deep)}
@@ -124,33 +91,20 @@ header.site nav a:hover{border-bottom-color:var(--geranium);color:var(--geranium
 .memo-row .lbl{font-family:'Cormorant Garamond',serif;text-transform:uppercase;letter-spacing:.15em;font-size:11px;color:var(--ink-soft)}
 .memo-body p{font-family:'EB Garamond',serif;font-size:18px;margin:0 0 18px 0}
 
-.placeholder{
-  border:1.5px dashed var(--moss-light);border-radius:14px;padding:60px 30px;text-align:center;
-  background:repeating-linear-gradient(45deg,rgba(241,234,220,.6) 0 10px,rgba(250,246,238,.6) 10px 20px);
-}
+.placeholder{border:1.5px dashed var(--moss-light);border-radius:14px;padding:60px 30px;text-align:center;background:repeating-linear-gradient(45deg,rgba(241,234,220,.6) 0 10px,rgba(250,246,238,.6) 10px 20px)}
 .placeholder .ph-title{font-family:'Caveat',cursive;font-size:30px;color:var(--moss-deep);margin-bottom:8px}
 .ph-pages{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
-.ph-pages .pg{
-  width:96px;height:128px;border:1px solid var(--moss-light);border-radius:8px;
-  background:var(--bg-cream-deep);color:var(--moss);font-family:'Caveat',cursive;
-  display:flex;align-items:center;justify-content:center
-}
+.ph-pages .pg{width:96px;height:128px;border:1px solid var(--moss-light);border-radius:8px;background:var(--bg-cream-deep);color:var(--moss);font-family:'Caveat',cursive;display:flex;align-items:center;justify-content:center}
 
 .contents{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:24px}
-.contents a{
-  text-decoration:none;display:flex;gap:14px;align-items:flex-start;padding:18px;
-  background:var(--card);border:1px solid var(--border);border-radius:14px;transition:transform .2s
-}
+.contents a{text-decoration:none;display:flex;gap:14px;align-items:flex-start;padding:18px;background:var(--card);border:1px solid var(--border);border-radius:14px;transition:transform .2s}
 .contents a:hover{transform:translateY(-2px)}
 .contents .num{font-family:'Caveat',cursive;font-size:30px;color:var(--geranium);line-height:1}
 .contents .ttl{font-size:20px;color:var(--moss-deep);line-height:1.2}
 .contents .meta{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-soft);margin-top:4px}
 
 footer.site{margin-top:60px}
-footer.site .ftr-row{
-  max-width:1100px;margin:0 auto;padding:24px;display:flex;justify-content:space-between;
-  align-items:center;flex-wrap:wrap;gap:12px
-}
+footer.site .ftr-row{max-width:1100px;margin:0 auto;padding:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-decoration-color:var(--moss-light);text-underline-offset:4px}
 
 .contact-grid{display:grid;grid-template-columns:1fr;gap:16px}
@@ -187,34 +141,27 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
   </div>
 </header>
 
-<!-- TITLE PAGE WITH PHOTO -->
 <section id="title" class="section">
   <div class="paper hero">
     <div>
       <span class="doc-tag">✿ English 2210 · Technical Writing Portfolio</span>
       <h1 style="margin-top:18px">Grace<span class="tomallo">Tomallo</span></h1>
       <div class="divider"></div>
-      <p>
-        Hello! My name is Grace Tomallo, and I am a History major at the University of New Mexico.
-        These pieces represent some of my best work from my Technical Writing and Communications
-        course, where I strengthened my skills in research, professional writing, and communication.
-      </p>
+      <p>Hello! My name is Grace Tomallo, and I am a History major at the University of New Mexico. These pieces represent some of my best work from my Technical Writing and Communications course, where I strengthened my skills in research, professional writing, and communication.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#resume">Begin the Portfolio →</a>
         <a class="btn btn-ghost" href="mailto:Gtomallo@unm.edu">✉ Gtomallo@unm.edu</a>
       </div>
     </div>
     <div class="bio-photo-wrap">
-      <img class="bio-photo"
-           src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/uscnn73j_IMG_4804.jpeg"
-           alt="Grace Tomallo">
+      <img class="bio-photo" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/uscnn73j_IMG_4804.jpeg" alt="Grace Tomallo">
       <div class="bio-photo-caption">— Grace —</div>
     </div>
   </div>
 
   <div style="margin-top:48px">
     <p class="script" style="font-size:24px;color:var(--moss);margin:0">Portfolio Contents</p>
-    <h2 style="font-size:32px;margin:6px 0 0">Ten documents, one garden</h2>
+    <h2 style="font-size:32px;margin:6px 0 0">A small garden of writing</h2>
     <div class="contents">
       <a href="#resume"><span class="num">01</span><span><span class="ttl">Resume</span><div class="meta">Document 1</div></span></a>
       <a href="#outcomes"><span class="num">02</span><span><span class="ttl">Portfolio Outcomes Memo</span><div class="meta">Document 2</div></span></a>
@@ -230,21 +177,19 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
   </div>
 </section>
 
-<!-- 1. RESUME -->
 <section id="resume" class="section">
   <div class="page-head"><span class="doc-tag">✿ Document 1</span>
     <div style="margin-top:12px"><span class="num">01.</span><h2>Resume</h2></div>
     <p class="sub">A snapshot of skills, experience, and education.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="documents/resume.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="documents/resume.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="resume.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="resume.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="1100" src="documents/resume.pdf#view=FitH" title="Resume"></iframe></div>
+    <div class="viewer"><iframe height="1100" src="resume.pdf#view=FitH" title="Resume"></iframe></div>
   </div>
 </section>
 
-<!-- 2. OUTCOMES MEMO (placeholder) -->
 <section id="outcomes" class="section">
   <div class="page-head"><span class="doc-tag">✿ Document 2</span>
     <div style="margin-top:12px"><span class="num">02.</span><h2>Portfolio Outcomes Memo</h2></div>
@@ -258,7 +203,6 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
   </div>
 </section>
 
-<!-- 3. CLUB MEMO -->
 <section id="club-memo" class="section">
   <div class="page-head"><span class="doc-tag">✿ Document 3</span>
     <div style="margin-top:12px"><span class="num">03.</span><h2>UNM Club Memo</h2></div>
@@ -281,90 +225,84 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
   </div>
 </section>
 
-<!-- 4. COMPLAINT -->
 <section id="complaint" class="section">
   <div class="page-head"><span class="doc-tag">✿ Document 4</span>
     <div style="margin-top:12px"><span class="num">04.</span><h2>UNM Club Complaint Letter</h2></div>
     <p class="sub">A formal complaint letter written on behalf of the club to an external audience.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="documents/complaint-letter.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="documents/complaint-letter.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="complaint-letter.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="complaint-letter.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="880" src="documents/complaint-letter.pdf#view=FitH" title="Complaint Letter"></iframe></div>
+    <div class="viewer"><iframe height="880" src="complaint-letter.pdf#view=FitH" title="Complaint Letter"></iframe></div>
   </div>
 </section>
 
-<!-- 5. FLYER -->
 <section id="flyer" class="section">
   <div class="page-head"><span class="doc-tag">✿ Document 5</span>
     <div style="margin-top:12px"><span class="num">05.</span><h2>UNM Club Flyer</h2></div>
     <p class="sub">A one-page promotional flyer designed for the Garden Club.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="documents/flyer.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="documents/flyer.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="flyer.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="flyer.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="1000" src="documents/flyer.pdf#view=FitH" title="Flyer"></iframe></div>
+    <div class="viewer"><iframe height="1000" src="flyer.pdf#view=FitH" title="Flyer"></iframe></div>
   </div>
 </section>
 
-<!-- 6. POSTMORTEM -->
 <section id="postmortem" class="section">
   <div class="page-head"><span class="doc-tag">✿ Document 6</span>
     <div style="margin-top:12px"><span class="num">06.</span><h2>Postmortem PowerPoint Report</h2></div>
     <p class="sub">A slide-deck postmortem analyzing what worked, what didn’t, and what to change next time.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="documents/postmortem.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="documents/postmortem.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="postmortem.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="postmortem.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="760" src="documents/postmortem.pdf#view=FitH" title="Postmortem"></iframe></div>
+    <div class="viewer"><iframe height="760" src="postmortem.pdf#view=FitH" title="Postmortem"></iframe></div>
   </div>
 </section>
 
-<!-- 7. EMERGENCY -->
 <section id="emergency" class="section">
   <div class="page-head"><span class="doc-tag">✿ Document 7</span>
     <div style="margin-top:12px"><span class="num">07.</span><h2>Emergency Instructions</h2></div>
     <p class="sub">Concise, audience-appropriate emergency-procedure instructions.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="documents/emergency-instructions.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="documents/emergency-instructions.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="emergency-instructions.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="emergency-instructions.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="880" src="documents/emergency-instructions.pdf#view=FitH" title="Emergency Instructions"></iframe></div>
+    <div class="viewer"><iframe height="880" src="emergency-instructions.pdf#view=FitH" title="Emergency Instructions"></iframe></div>
   </div>
 </section>
 
-<!-- 8. WRITTEN -->
 <section id="written" class="section">
   <div class="page-head"><span class="doc-tag">✿ Document 8</span>
     <div style="margin-top:12px"><span class="num">08.</span><h2>Written Instructions</h2></div>
     <p class="sub">Step-by-step written instructions — how to make pizza rolls.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="documents/written-instructions.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="documents/written-instructions.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="written-instructions.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="written-instructions.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="880" src="documents/written-instructions.pdf#view=FitH" title="Written Instructions"></iframe></div>
+    <div class="viewer"><iframe height="880" src="written-instructions.pdf#view=FitH" title="Written Instructions"></iframe></div>
   </div>
 </section>
 
-<!-- 9. VIDEO -->
 <section id="video" class="section">
   <div class="page-head"><span class="doc-tag">✿ Document 9</span>
     <div style="margin-top:12px"><span class="num">09.</span><h2>Video Instructions</h2></div>
     <p class="sub">A short instructional video walking the audience through a procedure.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="documents/video-instructions.mov">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="documents/video-instructions.mov">⬇ Download Video</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="video-instructions.mov">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="video-instructions.mov">⬇ Download Video</a>
     </div>
     <div class="viewer" style="background:#000">
       <video controls playsinline preload="metadata">
-        <source src="documents/video-instructions.mov" type="video/quicktime">
-        <source src="documents/video-instructions.mov" type="video/mp4">
+        <source src="video-instructions.mov" type="video/quicktime">
+        <source src="video-instructions.mov" type="video/mp4">
         Your browser may not support this video. Use the Download Video button above.
       </video>
     </div>
@@ -372,21 +310,19 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
   </div>
 </section>
 
-<!-- 10. FORMAL REPORT -->
 <section id="formal" class="section">
   <div class="page-head"><span class="doc-tag">✿ Document 10</span>
     <div style="margin-top:12px"><span class="num">10.</span><h2>Formal Report</h2></div>
     <p class="sub">The semester’s capstone formal report — research, analysis, and recommendations.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="documents/formal-report.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="documents/formal-report.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="formal-report.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="formal-report.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="960" src="documents/formal-report.pdf#view=FitH" title="Formal Report"></iframe></div>
+    <div class="viewer"><iframe height="960" src="formal-report.pdf#view=FitH" title="Formal Report"></iframe></div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section">
   <div class="page-head"><span class="doc-tag">✿ Conclusion</span>
     <div style="margin-top:12px"><h2>Conclusion &amp; Contact</h2></div>
@@ -455,3 +391,4 @@ buildBorder('botBorder', 14);
 </script>
 </body>
 </html>
+
