@@ -17,22 +17,13 @@
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg-cream);color:var(--ink)}
-body{
-  font-family:'Cormorant Garamond','EB Garamond',Georgia,serif;
-  font-size:18px; line-height:1.65; -webkit-font-smoothing:antialiased;
-  background-image:
-    radial-gradient(at 12% 8%, rgba(156,175,136,.18) 0, transparent 45%),
-    radial-gradient(at 88% 92%, rgba(226,117,102,.15) 0, transparent 50%);
-  background-attachment:fixed;
-}
+body{font-family:'Cormorant Garamond','EB Garamond',Georgia,serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;background-image:radial-gradient(at 12% 8%, rgba(156,175,136,.18) 0, transparent 45%),radial-gradient(at 88% 92%, rgba(226,117,102,.15) 0, transparent 50%);background-attachment:fixed}
 a{color:inherit}
 h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;color:var(--moss-deep);margin:0}
 .script{font-family:'Caveat',cursive}
 .serif{font-family:'Cormorant Garamond',Georgia,serif}
 .body-font{font-family:'EB Garamond',Georgia,serif}
-
 .section{max-width:980px;margin:0 auto;padding:80px 24px;scroll-margin-top:96px}
-
 header.site{position:sticky;top:0;z-index:30;background:rgba(250,246,238,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
 header.site .row{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;max-width:1280px;margin:0 auto;gap:16px;flex-wrap:wrap}
 header.site .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
@@ -40,7 +31,6 @@ header.site .brand .name{font-family:'Caveat',cursive;font-size:26px;color:var(-
 header.site .brand .sub{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
 header.site nav a{text-decoration:none;color:var(--moss-deep);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-left:18px;padding-bottom:2px;border-bottom:1px solid transparent;transition:.2s}
 header.site nav a:hover{border-bottom-color:var(--geranium);color:var(--geranium)}
-
 .flower-border{display:flex;justify-content:space-between;align-items:flex-end;padding:0 8px;height:64px;pointer-events:none;user-select:none}
 .flower-border.bottom{transform:rotate(180deg);height:56px}
 .flower-border .item{animation:drift 6s ease-in-out infinite}
@@ -49,69 +39,56 @@ header.site nav a:hover{border-bottom-color:var(--geranium);color:var(--geranium
 @keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
 .flower-border-top-bg{background:linear-gradient(180deg, rgba(156,175,136,.25), transparent)}
 .flower-border-bot-bg{background:linear-gradient(0deg, rgba(156,175,136,.30), transparent)}
-
 .paper{background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:0 1px 0 rgba(217,207,184,.4),0 12px 30px -18px rgba(58,46,34,.18),inset 0 0 0 1px rgba(252,249,241,.6);position:relative}
 .doc-tag{display:inline-flex;align-items:center;gap:8px;padding:4px 14px;border-radius:999px;border:1px solid var(--moss-light);background:rgba(207,217,186,.5);color:var(--moss-deep);font-family:'Caveat',cursive;font-size:18px}
 .divider{display:flex;align-items:center;gap:14px;margin:28px 0;color:var(--moss)}
 .divider:before,.divider:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(156,175,136,.7),transparent)}
-
 .hero{padding:60px 50px;border-radius:28px;overflow:hidden;position:relative;display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
 @media(min-width:840px){.hero{grid-template-columns:1.3fr 1fr;padding:64px 60px}}
 .hero h1{font-size:clamp(48px,8vw,96px);line-height:1.05}
 .hero .tomallo{display:block;font-family:'Caveat',cursive;color:var(--geranium);font-style:italic}
 .hero p{font-size:20px;color:var(--ink)}
 .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
-
 .bio-photo-wrap{justify-self:center;position:relative}
 .bio-photo{width:100%;max-width:340px;aspect-ratio:1/1;object-fit:cover;display:block;border-radius:12px;background:#fff;padding:14px 14px 56px;box-shadow:0 24px 50px -22px rgba(58,46,34,.45),0 1px 0 rgba(0,0,0,.04);transform:rotate(-3deg);transition:transform .4s ease;border:1px solid var(--border)}
 .bio-photo:hover{transform:rotate(-1deg) translateY(-3px)}
 .bio-photo-caption{position:absolute;left:0;right:0;bottom:18px;text-align:center;font-family:'Caveat',cursive;font-size:22px;color:var(--moss-deep);pointer-events:none;transform:rotate(-3deg)}
-
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-family:'Cormorant Garamond',serif;text-transform:uppercase;letter-spacing:.15em;font-size:13px;text-decoration:none;transition:transform .2s}
 .btn:hover{transform:translateY(-2px)}
 .btn-primary{background:var(--moss-deep);color:var(--bg-cream)}
 .btn-ghost{border:1px solid var(--moss-deep);color:var(--moss-deep)}
-
 .page-head{margin-bottom:30px}
 .page-head .num{font-family:'Caveat',cursive;font-size:48px;color:var(--geranium);margin-right:14px;vertical-align:baseline}
 .page-head h2{display:inline;font-size:clamp(36px,5vw,60px)}
 .page-head .sub{font-style:italic;color:var(--ink-soft);margin-top:10px;font-size:18px}
-
 .sheet{padding:40px;border-radius:20px}
 @media(max-width:640px){.sheet{padding:24px}.hero{padding:32px 24px}}
-
 .controls{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end;margin-bottom:14px}
 .viewer{border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--bg-cream-deep)}
 .viewer iframe,.viewer video{display:block;width:100%;border:0}
-
 .memo-head{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding-bottom:20px;margin-bottom:24px;border-bottom:1px solid var(--border);gap:12px}
 .memo-head .title{font-family:'Caveat',cursive;font-size:32px;color:var(--moss-deep);line-height:1}
 .memo-head .tagline{font-style:italic;color:var(--ink-soft);font-size:14px;margin-top:4px}
 .memo-row{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:baseline;margin-bottom:8px}
 .memo-row .lbl{font-family:'Cormorant Garamond',serif;text-transform:uppercase;letter-spacing:.15em;font-size:11px;color:var(--ink-soft)}
 .memo-body p{font-family:'EB Garamond',serif;font-size:18px;margin:0 0 18px 0}
-
 .placeholder{border:1.5px dashed var(--moss-light);border-radius:14px;padding:60px 30px;text-align:center;background:repeating-linear-gradient(45deg,rgba(241,234,220,.6) 0 10px,rgba(250,246,238,.6) 10px 20px)}
 .placeholder .ph-title{font-family:'Caveat',cursive;font-size:30px;color:var(--moss-deep);margin-bottom:8px}
 .ph-pages{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
 .ph-pages .pg{width:96px;height:128px;border:1px solid var(--moss-light);border-radius:8px;background:var(--bg-cream-deep);color:var(--moss);font-family:'Caveat',cursive;display:flex;align-items:center;justify-content:center}
-
 .contents{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin-top:24px}
 .contents a{text-decoration:none;display:flex;gap:14px;align-items:flex-start;padding:18px;background:var(--card);border:1px solid var(--border);border-radius:14px;transition:transform .2s}
 .contents a:hover{transform:translateY(-2px)}
 .contents .num{font-family:'Caveat',cursive;font-size:30px;color:var(--geranium);line-height:1}
 .contents .ttl{font-size:20px;color:var(--moss-deep);line-height:1.2}
 .contents .meta{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-soft);margin-top:4px}
-
 footer.site{margin-top:60px}
 footer.site .ftr-row{max-width:1100px;margin:0 auto;padding:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-decoration-color:var(--moss-light);text-underline-offset:4px}
-
 .contact-grid{display:grid;grid-template-columns:1fr;gap:16px}
 @media(min-width:760px){.contact-grid{grid-template-columns:1fr 1fr}}
 .contact-card{display:flex;align-items:center;gap:14px;padding:18px;background:var(--card);border:1px solid var(--border);border-radius:14px;text-decoration:none}
 .contact-card .ico{padding:10px;border-radius:999px;background:var(--accent);color:var(--moss-deep);display:flex}
-
 ::selection{background:rgba(156,175,136,.6);color:var(--moss-deep)}
 </style>
 </head>
@@ -161,7 +138,7 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
 
   <div style="margin-top:48px">
     <p class="script" style="font-size:24px;color:var(--moss);margin:0">Portfolio Contents</p>
-  <h2 style="font-size:32px;margin:6px 0 0">A semester, in writing</h2>
+    <h2 style="font-size:32px;margin:6px 0 0">A semester, in writing</h2>
     <div class="contents">
       <a href="#resume"><span class="num">01</span><span><span class="ttl">Resume</span><div class="meta">Document 1</div></span></a>
       <a href="#outcomes"><span class="num">02</span><span><span class="ttl">Portfolio Outcomes Memo</span><div class="meta">Document 2</div></span></a>
@@ -183,10 +160,10 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
     <p class="sub">A snapshot of skills, experience, and education.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="resume.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="resume.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/j0rq5iqp_resume.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/j0rq5iqp_resume.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="1100" src="resume.pdf#view=FitH" title="Resume"></iframe></div>
+    <div class="viewer"><iframe height="1100" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/j0rq5iqp_resume.pdf#view=FitH" title="Resume"></iframe></div>
   </div>
 </section>
 
@@ -222,6 +199,10 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
       <p>There will be a meeting held on <strong>Friday the 6th at 4:00 pm</strong> at Dane Smith Hall to discuss the issue and solutions further.</p>
       <p>If you have any questions before the meeting, feel free to contact me at <a href="mailto:Gtomallo@unm.edu" style="color:var(--moss-deep);text-decoration:underline">Gtomallo@unm.edu</a>.</p>
     </div>
+    <div class="controls" style="margin-top:24px">
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/axjbdptf_club_memo.pdf">↗ Open PDF version</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/axjbdptf_club_memo.pdf">⬇ Download PDF</a>
+    </div>
   </div>
 </section>
 
@@ -231,10 +212,10 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
     <p class="sub">A formal complaint letter written on behalf of the club to an external audience.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="complaint-letter.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="complaint-letter.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/1hoxkesp_complaint-letter.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/1hoxkesp_complaint-letter.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="880" src="complaint-letter.pdf#view=FitH" title="Complaint Letter"></iframe></div>
+    <div class="viewer"><iframe height="880" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/1hoxkesp_complaint-letter.pdf#view=FitH" title="Complaint Letter"></iframe></div>
   </div>
 </section>
 
@@ -244,10 +225,10 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
     <p class="sub">A one-page promotional flyer designed for the Garden Club.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="flyer.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="flyer.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/ji4m0wdt_flyer.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/ji4m0wdt_flyer.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="1000" src="flyer.pdf#view=FitH" title="Flyer"></iframe></div>
+    <div class="viewer"><iframe height="1000" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/ji4m0wdt_flyer.pdf#view=FitH" title="Flyer"></iframe></div>
   </div>
 </section>
 
@@ -257,10 +238,10 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
     <p class="sub">A slide-deck postmortem analyzing what worked, what didn’t, and what to change next time.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="postmortem.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="postmortem.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/vizuz199_postmortem.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/vizuz199_postmortem.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="760" src="postmortem.pdf#view=FitH" title="Postmortem"></iframe></div>
+    <div class="viewer"><iframe height="760" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/vizuz199_postmortem.pdf#view=FitH" title="Postmortem"></iframe></div>
   </div>
 </section>
 
@@ -270,10 +251,10 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
     <p class="sub">Concise, audience-appropriate emergency-procedure instructions.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="emergency-instructions.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="emergency-instructions.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/xtuej8ey_emergency-instructions.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/xtuej8ey_emergency-instructions.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="880" src="emergency-instructions.pdf#view=FitH" title="Emergency Instructions"></iframe></div>
+    <div class="viewer"><iframe height="880" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/xtuej8ey_emergency-instructions.pdf#view=FitH" title="Emergency Instructions"></iframe></div>
   </div>
 </section>
 
@@ -283,10 +264,10 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
     <p class="sub">Step-by-step written instructions — how to make pizza rolls.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="written-instructions.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="written-instructions.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/xb8vdrx7_written-instructions.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/xb8vdrx7_written-instructions.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="880" src="written-instructions.pdf#view=FitH" title="Written Instructions"></iframe></div>
+    <div class="viewer"><iframe height="880" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/xb8vdrx7_written-instructions.pdf#view=FitH" title="Written Instructions"></iframe></div>
   </div>
 </section>
 
@@ -296,13 +277,13 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
     <p class="sub">A short instructional video walking the audience through a procedure.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="video-instructions.mov">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="video-instructions.mov">⬇ Download Video</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/hzl0u586_copy_442DA329-AFB9-4702-8575-8E2DFB04E59E.mov">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/hzl0u586_copy_442DA329-AFB9-4702-8575-8E2DFB04E59E.mov">⬇ Download Video</a>
     </div>
     <div class="viewer" style="background:#000">
       <video controls playsinline preload="metadata">
-        <source src="video-instructions.mov" type="video/quicktime">
-        <source src="video-instructions.mov" type="video/mp4">
+        <source src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/hzl0u586_copy_442DA329-AFB9-4702-8575-8E2DFB04E59E.mov" type="video/quicktime">
+        <source src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/hzl0u586_copy_442DA329-AFB9-4702-8575-8E2DFB04E59E.mov" type="video/mp4">
         Your browser may not support this video. Use the Download Video button above.
       </video>
     </div>
@@ -316,10 +297,10 @@ footer.site .ftr-row a{color:var(--moss-deep);text-decoration:underline;text-dec
     <p class="sub">The semester’s capstone formal report — research, analysis, and recommendations.</p><div class="divider"></div></div>
   <div class="paper sheet">
     <div class="controls">
-      <a class="btn btn-ghost" target="_blank" rel="noopener" href="formal-report.pdf">↗ Open in new tab</a>
-      <a class="btn btn-primary" download href="formal-report.pdf">⬇ Download PDF</a>
+      <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/idkdake7_formal-report.pdf%20.pdf">↗ Open in new tab</a>
+      <a class="btn btn-primary" download href="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/idkdake7_formal-report.pdf%20.pdf">⬇ Download PDF</a>
     </div>
-    <div class="viewer"><iframe height="960" src="formal-report.pdf#view=FitH" title="Formal Report"></iframe></div>
+    <div class="viewer"><iframe height="960" src="https://customer-assets.emergentagent.com/job_unm-portfolio-2026/artifacts/idkdake7_formal-report.pdf%20.pdf#view=FitH" title="Formal Report"></iframe></div>
   </div>
 </section>
 
